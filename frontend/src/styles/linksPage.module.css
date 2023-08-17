@@ -1,0 +1,16 @@
+.link {
+  min-width: 150px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.linkFormButton {
+  margin-top: 1rem;
+  min-width: 150px;
+  width: 50%;
+  margin-left: 16.5rem;
+  border-radius: 15px;
+}
+

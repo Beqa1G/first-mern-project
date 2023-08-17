@@ -1,0 +1,158 @@
+.formWrapper {
+  width: 60%;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  margin-inline: auto;
+}
+
+.signupFormControl {
+  margin-inline: auto;
+}
+
+.signUpControlWrapper {
+  margin-top: 2rem;
+}
+
+.signupFormheader {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.signupCard {
+  border: 2px solid rgb(43, 43, 43);
+  margin-top: 3rem;
+  margin-inline: auto;
+  width: 70%;
+  background-color: gray;
+}
+
+.signupButton {
+  width: 50%;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.loginFormControl {
+  margin-inline: auto;
+  width: 70%;
+}
+
+.signupButton {
+  width: 50%;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.loginCard {
+  border: 2px solid rgb(43, 43, 43);
+  margin-top: 3rem;
+  margin-inline: auto;
+  width: 50%;
+  background-color: gray;
+}
+
+.flex {
+  display: flex;
+  gap: 29rem;
+}
+
+.settingsCard {
+  border: 2px solid rgb(43, 43, 43);
+  margin-top: 3rem;
+  margin-inline: auto;
+  width: 30%;
+  background-color: gray;
+}
+
+.settingsCardFlex {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.marginBlock {
+  margin-block: 2rem;
+}
+
+.editable {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  width: 80%;
+  padding: 0.2rem;
+}
+
+.editable:hover {
+  cursor: pointer;
+}
+
+.margin1 {
+  margin-left: 6rem;
+  margin-bottom: 2rem;
+}
+
+.margin2 {
+  margin-left: 4.5rem;
+  margin-bottom: 2rem;
+}
+
+.loadingStates {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.usernameP {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-inline: auto;
+  width: 50%;
+  background-color: gray;
+  align-items: center;
+}
+
+.profileLinkCardWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  
+}
+
+
+.profileLinkCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.linkUrl {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: white;
+  transition: transform 0.2s ease, scale 0.2s ease;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  text-align: center;
+}
+
+.linkUrl:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
