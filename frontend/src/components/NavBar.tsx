@@ -12,7 +12,7 @@ export default function NavBar({
   loggedInUser,
 }: NavBarProps) {
   return (
-    <Navbar bg="primary" variant="dark" expand="sm" sticky="top">
+    <Navbar bg="dark" variant="dark" expand="sm" sticky="top" >
       <Container>
         <Navbar.Brand as={Link} to="/">
           Social media links app
