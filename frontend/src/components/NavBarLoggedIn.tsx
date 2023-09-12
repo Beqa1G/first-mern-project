@@ -35,7 +35,7 @@ export default function NavBarLoggedIn({
 
   return (
     <Container>
-      <Navbar.Collapse id="basic-navbar-nav">
+      <Nav>
         <Nav className={styles.flex}>
           <Nav.Link as={Link} to="/linksPage">
             Links
@@ -45,8 +45,8 @@ export default function NavBarLoggedIn({
         <Nav.Link as={Link} to="/usersettings" className="ms-2">
           Settings
         </Nav.Link>
-        <Button onClick={handleLogout}>Sign out</Button>
-      </Navbar.Collapse>
+        <Button variant="dark" onClick={handleLogout}>Sign out</Button>
+      </Nav>
     </Container>
   );
 }
