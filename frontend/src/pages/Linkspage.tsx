@@ -139,7 +139,7 @@ export default function LinksPage() {
   return (
     <>
       <Container>
-        <Button
+        <Button variant="dark"
           className={`${styles.linkFormButton} ${styles1.flexCenter}`}
           onClick={() => {
             reset();
