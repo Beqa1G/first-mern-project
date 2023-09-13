@@ -8,11 +8,9 @@ export interface NavBarProps {
   loggedInUser: User | null;
 }
 
-export default function NavBar({
-  loggedInUser,
-}: NavBarProps) {
+export default function NavBar({ loggedInUser }: NavBarProps) {
   return (
-    <Navbar bg="dark" variant="dark" expand="sm" sticky="top" >
+    <Navbar bg="dark" variant="dark" expand="sm" sticky="top">
       <Container>
         <Navbar.Brand as={Link} to="/">
           Social media links app
@@ -26,10 +24,14 @@ export default function NavBar({
           </Nav>
           <Nav className="ms-auto">
             {loggedInUser ? (
-              <NavBarLoggedIn User={loggedInUser} />
+              <>
+                <Nav.Link as={Link} to="/linksPage">
+                  Links
+                </Nav.Link>
+                <NavBarLoggedIn User={loggedInUser} />
+              </>
             ) : (
-              <NavBarLoggedOut
-              />
+              <NavBarLoggedOut />
             )}
           </Nav>
         </Navbar.Collapse>
