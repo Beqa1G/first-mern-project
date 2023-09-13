@@ -10,7 +10,7 @@ import {
   QueryClientProvider,
   useQuery,
 } from "@tanstack/react-query";
-import { Container, Spinner } from "react-bootstrap";
+import { Container} from "react-bootstrap";
 import MainPage from "./pages/MainPage";
 import NavBar from "./components/NavBar";
 import { useState } from "react";
@@ -19,7 +19,6 @@ import { getLoggedInUser } from "./network/users.api";
 import SignUpSuccessPage from "./pages/SignUpSuccessPage";
 import UserSettingsPage from "./pages/UserSettingsPage";
 import UserProfilePage from "./pages/UserProfilePage";
-import styles from "./styles/link.module.css";
 
 const queryClient = new QueryClient({
   defaultOptions: {
