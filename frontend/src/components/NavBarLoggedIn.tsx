@@ -1,4 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useState } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { User } from "../models/user";
@@ -34,12 +35,10 @@ export default function NavBarLoggedIn({
   };
 
   return (
+    
     <Container>
       <Nav>
         <Nav className={styles.flex}>
-          <Nav.Link as={Link} to="/linksPage">
-            Links
-          </Nav.Link>
           <Navbar.Text>Signed in as: {User.username}</Navbar.Text>
         </Nav>
         <Nav.Link as={Link} to="/usersettings" className="ms-2">
