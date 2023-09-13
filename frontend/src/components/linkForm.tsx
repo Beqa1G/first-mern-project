@@ -83,7 +83,7 @@ export default function LinkForm({
           </Form.Group>
         </Form>
         <Card.Footer>
-          <Button type="submit" form="linkForm" disabled={isSubmitting}>
+          <Button variant="dark" type="submit" form="linkForm" disabled={isSubmitting}>
             Submit
           </Button>
         </Card.Footer>
