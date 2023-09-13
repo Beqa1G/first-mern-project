@@ -40,20 +40,16 @@ export default function App() {
 }
 
 export function HomePage() {
-
   const [userRegistered, setUserRegistered] = useState(false);
 
-
-  const { data: loggedInUser = null,  isLoading, isFetching} = useQuery<User | null>(
-    ["loggedInUser"],
-    getLoggedInUser
-  );
-
-  console.log(loggedInUser)
-
-  if (isLoading && isFetching) {
-    return <Spinner className={styles.loadingStates} animation="border"/>
-  }
+  const {
+    data: loggedInUser = null,
+    isLoading,
+    isFetching,
+  } = useQuery<User | null>(["loggedInUser"], getLoggedInUser, {
+    retry: false, // Disable automatic retries
+    staleTime: 0, // Do not use cached data
+  });
 
   return (
     <BrowserRouter>
@@ -66,7 +62,7 @@ export function HomePage() {
             <Route
               path="/linksPage"
               element={
-                loggedInUser ? <LinksPage /> : <Navigate to="/loginpage" />
+                isLoading || loggedInUser ? <LinksPage /> : <Navigate to="/loginpage" />
               }
             />
 
@@ -95,8 +91,12 @@ export function HomePage() {
             <Route
               path="/usersettings"
               element={
-                loggedInUser ? (
-                  <UserSettingsPage loggedInUser={loggedInUser} />
+                isLoading || loggedInUser ? (
+                  <UserSettingsPage
+                    loggedInUser={loggedInUser}
+                    isLoading={isLoading}
+                    isFetching={isFetching}
+                  />
                 ) : (
                   <Navigate to="/loginpage" />
                 )
