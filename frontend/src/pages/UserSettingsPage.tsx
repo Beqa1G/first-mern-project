@@ -14,13 +14,18 @@ import styles from "../styles/routes.module.css";
 
 export interface UserSettingsPageProps {
   loggedInUser: User | null;
+  isLoading: boolean;
+  isFetching: boolean;
 }
 
 export default function UserSettingsPage({
   loggedInUser,
+  isLoading,
+  isFetching
 }: UserSettingsPageProps) {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
+
 
   const [isEditingUsernameMode, setIsEditingUsernameMode] = useState(false);
 
@@ -88,13 +93,16 @@ export default function UserSettingsPage({
 
       await editUserMutation.mutateAsync(updatedCredentials);
       setIsEditingPasswordMode(false);
-      setValue("password", ""); 
+      setValue("password", "");
     } catch (error: any) {
       alert(error.message);
       console.error(error.message);
     }
   };
 
+  if (isLoading && isFetching) {
+    return <Spinner className={styles.loadingStates} animation="border"/>
+  }
 
   return (
     <>
@@ -210,6 +218,7 @@ export default function UserSettingsPage({
           </Form>
         ) : (
           <Button
+            variant="dark"
             type="button"
             className={`btn primary ${styles.margin2}`}
             onClick={() => {
